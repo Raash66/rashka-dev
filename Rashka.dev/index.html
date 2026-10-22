@@ -573,7 +573,13 @@ main { overflow-x: clip; }
     if (text != null) n.textContent = text;
     return n;
   }
-  function blobUrl(id) { return "/_blob/" + id; }
+  function blobUrl(id) {
+    return "/_blob/" + id;
+  }
+
+  function resumeUrl(r) {
+    return r && r.path ? r.path : blobUrl(r.id);
+  }
   function fmtSize(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(b / 1024)) + " KB"; }
   function fmtDate(iso) {
     var d = new Date(iso);
