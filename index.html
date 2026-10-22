@@ -713,7 +713,7 @@ main { overflow-x: clip; }
     if (STATE.photo && STATE.photo.id) {
       var img = el("img", "portrait");
       img.alt = "Portrait of Eng. Abdirashid Abdulkadir Ahmed";
-      img.src = blobUrl(STATE.photo.id); img.width = 480; img.height = 600; img.loading = "lazy"; img.decoding = "async";
+      img.src = "images/profile.jpg"; img.width = 480; img.height = 600; img.loading = "lazy"; img.decoding = "async";
       frame.appendChild(img);
     } else {
       var fb = el("div", "portrait-fallback");
